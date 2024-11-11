@@ -41,7 +41,7 @@ a.cbtn.cbnt1:hover{
 }
 
 
-a.cbtn.pricing-btn {
+a.cbtn.products-btn {
     background: #08d665;
     padding-right: 70px;
     position: relative;
@@ -49,7 +49,7 @@ a.cbtn.pricing-btn {
     color: #fff;
 }
 
-a.cbtn.pricing-btn i {
+a.cbtn.products-btn i {
     position: absolute;
     top: 50%;
     right: 15px;

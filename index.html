@@ -23,22 +23,41 @@
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 
 </head>
 <!--HEADE END-->
 
 <body><!--BODY START-->
 
-    <!--PLACEHOLDER AREA START-->
+    <!--LOADING AREA START-->
     <div class="preloader">
         <div class="lds-dual-ring"></div>
     </div>
-    <!--PLACEHOLDER AREA END-->
+    <!--LOADING AREA END-->
 
-    <div class="site site-black"> <!--::::: SITE AREA START :::::::-->
+
+
+
+    <!--modal AREA START-->
+    <div id="modal" class="modal" onclick="cerrarSiFuera(event)">
+        <div class="modal-content" id="modalBackground"
+            style="color: white; text-align: center; padding: 20px; background-color: #333; border-radius: 10px;">
+            <h2>Proyecto: Mi Proyecto Increíble</h2>
+            <img src="assets/img/project/pronto.jpg" alt="Imagen del Proyecto">
+            <p>Este es un proyecto impresionante que aborda problemas de manera creativa.</p>
+            <button onclick="ocultar()">Ocultar Modal</button>
+        </div>
+    </div>
+
+
+    <!--modal AREA START-->
+
+
+
+
+    <div class="site site-black" id="site"> <!--::::: SITE AREA START :::::::-->
+
+
 
         <!--::::: HEADER AREA START :::::::-->
         <div class="header-area header-main" id="header">
@@ -73,8 +92,6 @@
 
         <!--:::::WELCOME ATRA START :::::::-->
         <div class="welcome-area-wrap welcome__wrap1">
-
-            <!--::::: WELCOME  START :::::::-->
             <div class="w-100" id="Home">
                 <div class="single-welcome-area home_1">
                     <div class="container">
@@ -94,7 +111,6 @@
                     </div>
                 </div>
             </div>
-            <!--::::: WELCOME  END:::::::-->
         </div>
         <!--:::::WELCOME AREA END :::::::-->
 
@@ -103,14 +119,14 @@
         <div class="about-area about-area1 section-padding" id="about">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 align-self-center">
+                    <div class="col-lg-4 align-self-center">
                         <div class="about-shape">
                             <div class="about-img-section about-img-section1 text-center">
 
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6 offset-lg-1 align-self-center">
+                    <div class="col-lg-7 offset-lg-1 align-self-center">
                         <div class="heading white">
                             <strong class="filltext">Sobre mi</strong>
                             <h2>Sobre <span>Mi</span></h2>
@@ -317,25 +333,25 @@
                 <div class="row">
                     <ul id="da-thumbs" class="da-thumbs portfolio-carousel owl-carousel">
                         <li>
-                            <a href="portfolio.html">
+                            <a onclick="ocultar()">
                                 <img src="assets/img/project/pronto.jpg" alt="">
                                 <div><span>Menu by Simon Jensen</span></div>
                             </a>
                         </li>
                         <li>
-                            <a href="portfolio.html">
+                            <a onclick="ocultar()">
                                 <img src="assets/img/project/pronto.jpg" alt="">
                                 <div><span>Menu by Simon Jensen</span></div>
                             </a>
                         </li>
                         <li>
-                            <a href="portfolio.html">
+                            <a onclick="ocultar()">
                                 <img src="assets/img/project/pronto.jpg" alt="">
                                 <div><span>Menu by Simon Jensen</span></div>
                             </a>
                         </li>
                         <li>
-                            <a href="portfolio.html">
+                            <a onclick="ocultar()">
                                 <img src="assets/img/project/pronto.jpg" alt="">
                                 <div>
                                     <span>Menu by Simon Jensen</span>
@@ -343,7 +359,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="portfolio.html">
+                            <a onclick="ocultar()">
                                 <img src="assets/img/project/pronto.jpg" alt="">
                                 <div>
                                     <span>Menu by Simon Jensen</span>
@@ -416,8 +432,8 @@
         </div> -->
         <!--:::::TESTIMONIALS AREA END :::::::-->
 
-        <!--:::::PRICING AREA START :::::::-->
-        <div class="pricing-area pricing-area1 section-padding" >
+        <!--:::::PRODUCTS AREA START :::::::-->
+        <div class="products-area products-area1 section-padding">
             <div class="container" id="productos">
                 <div class="row">
                     <div class="col-lg-6 ">
@@ -461,9 +477,10 @@
                 </div>
             </div>
         </div>
+        <!--:::::PRODUCTS AREA END :::::::-->
 
         <!--::::: CONTACT  START :::::::-->
-        <div class="social-area section-padding" >
+        <div class="social-area section-padding">
             <div class="container" id="contact">
                 <div class="row">
                     <div class="col-lg-6 align-self-center">
@@ -472,7 +489,6 @@
                             <small>Transformare tu idea en una página web real</small>
                         </div>
                     </div>
-
                     <div class="col-lg-6 align-self-center">
                         <div class="info-content">
                             <p>Si tienes un proyecto en mente, estoy aquí para ayudarte. ¡Contáctame y empecemos a
@@ -480,12 +496,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="space-60"></div>
                 <div class="row">
                     <div class="col-lg-10 m-auto">
                         <div class="row d-flex flex-row justify-content-between">
-
                             <div class="col-lg-4 p-2">
                                 <div class="single-social">
                                     <div class="service-icon">
@@ -499,11 +513,8 @@
                                     <div class="">
                                         <h5>Chile, Santiago, Puente Alto</h5>
                                     </div>
-
-
                                 </div>
                             </div>
-
                             <div class="col-lg-4 p-2">
                                 <div class="single-social">
                                     <div class="service-icon">
@@ -517,11 +528,8 @@
                                     <div class="">
                                         <h5>+56997777777</h5>
                                     </div>
-
-
                                 </div>
                             </div>
-
                             <div class="col-lg-4 p-2">
                                 <div class="single-social">
                                     <div class="service-icon">
@@ -535,13 +543,9 @@
                                     <div class="">
                                         <h5>felipe.rc.1992@gmail.com</h5>
                                     </div>
-
-
                                 </div>
                             </div>
-
                         </div>
-
                         <div class="space-60"></div>
 
                         <!-- Redes Sociales -->
@@ -580,7 +584,7 @@
                 <div class="row">
                     <div class="col-lg-6 m-auto text-center">
                         <div class="copyright">
-                            <p>Copyright © 2019 by <span class="mx-2"> FrCreative </span> Todos los derechos reservados
+                            <p>Copyright © 2024 by <span class="mx-2"> FrCreative </span> Todos los derechos reservados
                             </p>
                         </div>
                     </div>
@@ -590,7 +594,7 @@
         <!--:::::FOOTER AREA END :::::::-->
 
     </div>
-    <!--:::::PRICING AREA END :::::::-->
+
 
 
 
@@ -611,8 +615,11 @@
     <script src="assets/js/plugins/appear.js"></script>
     <script src="assets/js/plugins/jquery.hoverdir.js"></script>
     <script src="assets/js/plugins/isotop.v3.0.4.min.js"></script>
+    <script src="assets/js/plugins/modal.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 
 </body>
 <!--body end-->

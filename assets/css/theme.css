@@ -40,37 +40,107 @@ FOOTER AREA CSS
 
 =========>>COMMON CSS
 
-*//* Estilo general para el logo */
+*/
+/* Estilo general para el logo */
 .logo {
-    font-family: 'Helvetica', sans-serif;  /* O usa la fuente que prefieras */
+    font-family: 'Helvetica', sans-serif;
+    /* O usa la fuente que prefieras */
     font-weight: bold;
-    font-size: 15px;                      /* Tamaño grande */
-    color: #fff;                          /* Blanco */
-    text-transform: uppercase;            /* Mayúsculas */
-    letter-spacing: 3px;                  /* Espaciado entre letras */
-    text-decoration: none;                /* Sin subrayado */
+    font-size: 15px;
+    /* Tamaño grande */
+    color: #fff;
+    /* Blanco */
+    text-transform: uppercase;
+    /* Mayúsculas */
+    letter-spacing: 3px;
+    /* Espaciado entre letras */
+    text-decoration: none;
+    /* Sin subrayado */
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 20px;                   /* Espaciado alrededor */
-    transition: color 0.3s ease;          /* Transición suave para el color */
+    padding: 10px 20px;
+    /* Espaciado alrededor */
+    transition: color 0.3s ease;
+    /* Transición suave para el color */
 }
 
 /* Efecto de hover para el logo */
 .logo:hover {
-    color: #08D665;                       /* Color naranja cuando se pasa el ratón */
+    color: #08D665;
+    /* Color naranja cuando se pasa el ratón */
 }
 
 /* Asegurarse de que el texto dentro del logo esté bien alineado */
 .logo-text {
-    font-size: 40px;                      /* Tamaño de texto más grande */
-    color: inherit;                       /* Hereda el color del contenedor */
-    text-align: center;                   /* Asegura que el texto esté centrado */
+    font-size: 40px;
+    /* Tamaño de texto más grande */
+    color: inherit;
+    /* Hereda el color del contenedor */
+    text-align: center;
+    /* Asegura que el texto esté centrado */
+}
+
+
+
+
+/*
+==========================
+	MODAL AREA CSS
+==========================
+*/
+
+/* Fondo oscuro del modal */
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.276);
+    /* Fondo oscuro con opacidad */
+    z-index: 1000;
+}
+
+/* Contenido del modal */
+.modal-content {
+    text-align: center;
+    padding: 20px;
+    background-color: #ec1111;
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content img {
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+    margin: 20px;
+
+}
+
+
+/* Estilo del botón de ocultar */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d32f2f;
 }
 
 
 /*
-
 ==========================
 	HEADER AREA CSS
 ==========================
@@ -234,7 +304,9 @@ FOOTER AREA CSS
     position: relative;
     display: flex;
     justify-items: center;
+    align-items: center;
     z-index: 2;
+    height: 100vh;
 }
 
 
@@ -376,20 +448,23 @@ h1.wlc-filltext {
 
 .about-img-section {
     padding: 150px 10px;
-
 }
 
 .about-area1 {
     background-image: url(assets/img/bg/about-bg.html);
     background-position: center;
     background-size: cover;
+    height: 100vh;
+
 }
 
 .about-img-section1 {
     background-image: url(../img/author/foto.png);
     background-repeat: no-repeat;
     background-position: center;
-    
+    /* Centra la imagen */
+    background-size: cover;
+    /* Hace que la imagen cubra toda el área del contenedor */
 }
 
 
@@ -1508,7 +1583,7 @@ img.cta-shape {
 }
 
 .hover-effect:hover {
- transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -1542,6 +1617,7 @@ img.cta-shape {
     opacity: .3;
     max-height: 100%;
     max-width: 100%;
+
 }
 
 /*
@@ -1549,6 +1625,13 @@ img.cta-shape {
     FOOTER AREA CSS
 ==========================
 */
+.footer-area {
+    position: relative;
+    max-height: 10px;
+}
+
+
+
 .footer-area1 {
     background-image: url(../img/bg/footer-bg.png);
     background-size: cover;
@@ -1578,6 +1661,7 @@ img.cta-shape {
 
 .site-black {
     background: #0B0D0E;
+
 }
 
 .heading h2 {

@@ -306,7 +306,6 @@ button:hover {
     justify-items: center;
     align-items: center;
     z-index: 2;
-    height: 100vh;
 }
 
 
@@ -326,9 +325,9 @@ button:hover {
 .single-welcome-area {
     position: relative;
     z-index: 2;
-    height: 800px;
     display: flex;
     align-items: center;
+
 }
 
 .wlc-title h1 {
@@ -352,71 +351,17 @@ button:hover {
 }
 
 .wlc-author-1 {
-    position: absolute;
-    top: 25%;
-    right: 0%;
-    width: 50%;
-    bottom: 0;
-    height: 50%;
-    z-index: -1;
-}
-
-.author-1 img {
-    height: 100%;
-    width: auto;
-}
-
-
-.welcome-carousel .owl-dots {
-    position: absolute;
-    counter-reset: wlc-counter;
-    bottom: 50%;
-    right: 5%;
-    margin-bottom: -30px;
-}
-
-.welcome-carousel .owl-dots>div {
-    height: 30px;
-    width: 30px;
-    background: transparent;
-    border-radius: 50%;
     position: relative;
-    z-index: 2;
-    margin: 7px 0;
-    border: 1px solid #08d665;
-    transition: all .3s;
-    overflow: hidden;
+    /* Posición fuera de la vista */
+    transition: right 0.5s ease-in-out;
+    /* Transición suave */
 }
 
-.welcome-carousel .owl-dots>div:after {
-    position: absolute;
-    content: "0" counter(wlc-counter);
-    counter-increment: wlc-counter;
+.wlc-author-1 img {
     height: 100%;
     width: 100%;
-    text-align: center;
-    top: 50%;
-    margin-top: -13px;
-    color: #08d665;
-    font-size: 12px;
-    transition: all .3s;
-
-}
-
-.welcome-carousel .owl-dots>div:hover,
-.welcome-carousel .owl-dots>div.active {
-    background: #08d665;
-    border-color: #08d665;
-
-}
-
-.welcome-carousel .owl-dots>div:hover:after,
-.welcome-carousel .owl-dots>div.active:after {
-    color: #fff;
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-
+    object-fit: cover;
+    /* También puedes probar con 'contain' */
 }
 
 h1.wlc-filltext {
@@ -432,14 +377,6 @@ h1.wlc-filltext {
     -webkit-text-fill-color: transparent;
 }
 
-.wlc-author-1 img {
-
-    height: 80%;
-    width: 70%;
-}
-
-
-
 /*
 ==========================
 	ABOUT ATRA CSS
@@ -450,21 +387,21 @@ h1.wlc-filltext {
     padding: 150px 10px;
 }
 
+.about-area {
+    height: 100%;
+}
+
 .about-area1 {
     background-image: url(assets/img/bg/about-bg.html);
     background-position: center;
     background-size: cover;
-    height: 100vh;
-
 }
 
 .about-img-section1 {
     background-image: url(../img/author/foto.png);
     background-repeat: no-repeat;
     background-position: center;
-    /* Centra la imagen */
     background-size: cover;
-    /* Hace que la imagen cubra toda el área del contenedor */
 }
 
 
@@ -606,6 +543,11 @@ h1.wlc-filltext {
     transition: all .3s;
 
 }
+
+.skill-area {
+    height: 100%;
+}
+
 
 .skill-area.primery-skill .row:last-child div.skill-box:before {
     position: absolute;
@@ -1027,6 +969,61 @@ span.circle.circle-4 {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     height: 420px;
 }
+
+
+
+
+
+
+
+
+.text-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que el texto no sobresalga de la imagen */
+}
+
+.image-container {
+    position: relative;
+}
+
+.text-img img {
+    width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    transition: filter 1s ease; /* Aplica transiciones suaves para el desenfoque */
+}
+
+.text-img img:hover {
+    filter: blur(5px); /* Aplica el desenfoque a la imagen */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el texto */
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0; /* Inicialmente oculto */
+    transition: opacity 0.5s ease; /* Aparece gradualmente */
+    z-index: 1; /* Asegura que el texto quede por encima de la imagen */
+}
+
+.text-img:hover .text-overlay {
+    opacity: 1; /* Hace visible el texto cuando se hace hover */
+}
+
+
+
+
+
+
+
+
+
 
 
 

@@ -384,7 +384,7 @@ h1.wlc-filltext {
 */
 
 .about-img-section {
-    padding: 150px 10px;
+    padding: 140px 10px;
 }
 
 .about-area {
@@ -1550,11 +1550,11 @@ img.cta-shape {
     SOCIAL AREA CSS
 ==========================
 */
-
 .social-area .row>div {
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
+
 
 
 
@@ -1678,14 +1678,14 @@ img.cta-shape {
 }
 
 .heading strong.filltext {
-    font-size: 80px;
+    font-size: 60px;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #171c1e;
+    -webkit-text-stroke: 1px #fcfeff69;
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 100px;
+    top: 0px;
     z-index: -1;
 }
 
